@@ -8,10 +8,12 @@ public class SoulCollecting : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Soul")
+        if (other.gameObject.tag == "Player")
         {
            Destroy(this.gameObject);
-            GameManager.soulAmount++;
+            
+            GameManager.instance.AddSoul();
+            
             
         }
     }

@@ -24,20 +24,23 @@ public class NewPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveInput.x = Input.GetAxis("Horizontal");
-        moveInput.y = Input.GetAxis("Vertical");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
 
         rb.velocity = new Vector3(moveInput.x * moveSpeed, rb.velocity.y ,moveInput.y * moveSpeed);
 
-        if (moveInput.x < 0 )
+        //flip the spite in the direction player is walking
+        if (moveInput.x < 0)
         {
             sr.flipX = true;
-        }else if (moveInput.y < 0 )
+        }else if (moveInput.x > 0)
         {
             sr.flipX = false;
+
         }
 
+        //detect the ground in order to jump
         RaycastHit hit;
         if (Physics.Raycast(groundPoint.position, Vector3.down, out hit, .3f, Ground))
         {
@@ -56,5 +59,6 @@ public class NewPlayerController : MonoBehaviour
 
     }
 
-   
+
+
 }
