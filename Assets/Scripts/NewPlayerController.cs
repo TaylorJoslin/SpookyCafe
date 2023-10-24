@@ -6,12 +6,14 @@ public class NewPlayerController : MonoBehaviour
 {
     public Rigidbody rb;
     public float moveSpeed, jumpForce;
+    public SpriteRenderer sr;
 
     private Vector2 moveInput;
 
     public LayerMask Ground;
     public Transform groundPoint;
     private bool isGrounded;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,14 @@ public class NewPlayerController : MonoBehaviour
         moveInput.Normalize();
 
         rb.velocity = new Vector3(moveInput.x * moveSpeed, rb.velocity.y ,moveInput.y * moveSpeed);
+
+        if (moveInput.x < 0 )
+        {
+            sr.flipX = true;
+        }else if (moveInput.y < 0 )
+        {
+            sr.flipX = false;
+        }
 
         RaycastHit hit;
         if (Physics.Raycast(groundPoint.position, Vector3.down, out hit, .3f, Ground))
