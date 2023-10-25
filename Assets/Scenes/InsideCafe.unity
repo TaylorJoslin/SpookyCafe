@@ -959,7 +959,7 @@ Transform:
   m_GameObject: {fileID: 147198198}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.089, y: -0.085, z: -0.056}
+  m_LocalPosition: {x: 0.439, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2719,7 +2719,7 @@ GameObject:
   - component: {fileID: 871257126}
   - component: {fileID: 871257125}
   - component: {fileID: 871257124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3003,8 +3003,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31790933, y: 0, z: 0, w: 0.94812113}
-  m_LocalPosition: {x: 0, y: 4.349, z: -4.522327}
+  m_LocalRotation: {x: 0.45139578, y: 0, z: 0, w: 0.89232385}
+  m_LocalPosition: {x: 0, y: 4.1713967, z: -2.392311}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3272,7 +3272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackArea: {fileID: 147198198}
   attackPoint: {fileID: 147198199}
-  attackRange: 0.5
+  attackRange: 0.7
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -5234,7 +5234,7 @@ GameObject:
   - component: {fileID: 1742481664}
   - component: {fileID: 1742481663}
   - component: {fileID: 1742481662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5771,7 +5771,7 @@ Transform:
   m_GameObject: {fileID: 1928680343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6051,8 +6051,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953799100}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31790933, y: 0, z: 0, w: 0.94812113}
-  m_LocalPosition: {x: 0, y: 4.349, z: -4.522327}
+  m_LocalRotation: {x: 0.45139578, y: 0, z: 0, w: 0.89232385}
+  m_LocalPosition: {x: 0, y: 4.1713967, z: -2.392311}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
