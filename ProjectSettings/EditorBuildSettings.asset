@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScene(BLANK).unity
+    guid: aa87248ae02a84a998d19c77fabe26c4
+  - enabled: 1
     path: Assets/Scenes/InsideCafe.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Inside Cave.unity
+    guid: 0a491479a7cdf7849a5a55ad684fc39f
   m_configObjects: {}

@@ -6,7 +6,7 @@ public class NewPlayerController : MonoBehaviour
 {
     public Rigidbody rb;
     public float moveSpeed, jumpForce;
-    public SpriteRenderer sr;
+    public  SpriteRenderer sr;
 
     private Vector2 moveInput;
 

@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public GameObject SoulPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack();
         }
@@ -38,6 +39,15 @@ public class PlayerAttack : MonoBehaviour
                 attackArea.SetActive(attacking);
             }
         }
+
+       // if (NewPlayerController.sr.flipX == true)
+       // {
+            //attackPoint.transform.position = new Vector3(0.5f,-0.1f,0);
+       // }
+        //else if (NewPlayerController.sr.flipX == false)
+        //{
+            //attackPoint.transform.position = new Vector3(-0.5f, -0.1f, 0);
+        //}
     }
 
     private void Attack() 
@@ -47,6 +57,8 @@ public class PlayerAttack : MonoBehaviour
         foreach(Collider enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
+            Destroy(enemy.gameObject);
+            Instantiate(SoulPrefab, enemy.transform.position, enemy.transform.rotation);
         }
     }
 
