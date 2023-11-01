@@ -8,16 +8,20 @@ public class PlayerAttack : MonoBehaviour
     private bool attacking = false;
     private float timeToAttack = 0.25f;
     private float timer = 0f;
+    private float IndicatorAlive = 1f;
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public GameObject SoulPrefab;
+    public GameObject AttackRangeIndicator;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        AttackRangeIndicator.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +30,11 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
+            AttackRangeIndicator.SetActive(true);
+        }
+        else 
+        { 
+            AttackRangeIndicator.SetActive(false); 
         }
 
         if (attacking)
@@ -40,14 +49,6 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
-       // if (NewPlayerController.sr.flipX == true)
-       // {
-            //attackPoint.transform.position = new Vector3(0.5f,-0.1f,0);
-       // }
-        //else if (NewPlayerController.sr.flipX == false)
-        //{
-            //attackPoint.transform.position = new Vector3(-0.5f, -0.1f, 0);
-        //}
     }
 
     private void Attack() 
