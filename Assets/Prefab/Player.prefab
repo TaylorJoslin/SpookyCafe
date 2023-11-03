@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 9213055264498613538}
   - component: {fileID: 1038788207446056847}
   - component: {fileID: 4940914214650815230}
+  - component: {fileID: 2525885245754587261}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -376,6 +377,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundPoint: {fileID: 939972291896916155}
+  JumpSound: {fileID: 8300000, guid: 80e7dca18d760b1458eda3b7e7d90231, type: 3}
 --- !u!114 &9213055264498613538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackArea: {fileID: 3616296274360584845}
+  timeBetweenAttacks: 0
   attackPoint: {fileID: 2060538995365904198}
   attackRange: 1.5
   enemyLayers:
@@ -396,6 +399,7 @@ MonoBehaviour:
     m_Bits: 128
   SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
   AttackRangeIndicator: {fileID: 6364263716984990037}
+  AttackSound: {fileID: 8300000, guid: b74ac327955497c46b058cd09044cea8, type: 3}
 --- !u!136 &1038788207446056847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -431,6 +435,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30a99acecb95ae4e99ee8368bc8914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2525885245754587261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556772136151169680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf50679cf848c84bb45c22c4d19e79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  maxHeatlh: 6
+  player: {fileID: 0}
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0

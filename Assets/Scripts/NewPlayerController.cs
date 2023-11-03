@@ -14,6 +14,8 @@ public class NewPlayerController : MonoBehaviour
     public Transform groundPoint;
     private bool isGrounded;
 
+    public AudioClip JumpSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,7 @@ public class NewPlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded) 
         {
             rb.velocity += new Vector3(0f, jumpForce, 0f);
+            AudioSource.PlayClipAtPoint(JumpSound, transform.position);
         }
 
 

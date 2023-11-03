@@ -5,16 +5,16 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject attackArea;
-    private bool attacking = false;
-    private float timeToAttack = 0.25f;
-    private float timer = 0f;
-    private float IndicatorAlive = 1f;
+
+    bool hasAttacked;
+    public float timeBetweenAttacks;
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public GameObject SoulPrefab;
     public GameObject AttackRangeIndicator;
+    public AudioClip AttackSound;
    
 
     // Start is called before the first frame update
@@ -27,28 +27,39 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+        
         if (Input.GetButtonDown("Fire1"))
         {
-            Attack();
-            AttackRangeIndicator.SetActive(true);
+
+            if (!hasAttacked)
+            {
+                Debug.Log("PlayerATTACK");
+
+                Attack();
+                AttackRangeIndicator.SetActive(true);
+                AudioSource.PlayClipAtPoint(AttackSound, transform.position);
+                hasAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
+
+           
+            
         }
         else 
         { 
-            AttackRangeIndicator.SetActive(false); 
+            AttackRangeIndicator.SetActive(false);
+            
         }
 
-        if (attacking)
-        {
-            timer += Time.deltaTime;
+        
 
-            if(timer >= timeToAttack)
-            {
-                timer = 0;
-                attacking = false;
-                attackArea.SetActive(attacking);
-            }
-        }
+    }
 
+    private void ResetAttack()
+    {
+        hasAttacked = false;
     }
 
     private void Attack() 

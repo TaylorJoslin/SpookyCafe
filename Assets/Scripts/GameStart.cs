@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject SoulImage;
-    public GameObject SoulAmount;
+    public GameObject player, SoulImage, SoulAmount,HeartGroup;
 
-    public GameObject Screen;
-    public GameObject StartButton;
-    public GameObject Title;
-    public GameObject InstuctionK;
-    public GameObject InstuctionC;
+    public GameObject Screen, StartButton,Title, InstuctionK, InstuctionC;
+
+    //public AudioSource TitleMusic;
+    
 
 
     // Start is called before the first frame update
@@ -23,12 +20,16 @@ public class GameStart : MonoBehaviour
         player.SetActive(false);
         SoulImage.SetActive(false);
         SoulAmount.SetActive(false);
+        HeartGroup.SetActive(false);
 
         Screen.SetActive(true);
         StartButton.SetActive(true);
         Title.SetActive(true);
         InstuctionK.SetActive(true);
         InstuctionC.SetActive(true);
+
+        
+        
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class GameStart : MonoBehaviour
         player.SetActive(true);
         SoulImage.SetActive(true);
         SoulAmount.SetActive(true);
+        HeartGroup.SetActive(true);
 
         Screen.SetActive(false);
         StartButton.SetActive(false);
