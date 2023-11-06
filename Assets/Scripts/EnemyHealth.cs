@@ -6,7 +6,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public static event Action OnEnemyDamage;
-    public static float health,maxHealth;
+    public static event Action OnEnemyDeath;
+    public float health,maxHealth;
     public GameObject self;
 
     // Start is called before the first frame update
@@ -15,11 +16,6 @@ public class EnemyHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TakeDamage(float damage)
     {
@@ -29,8 +25,8 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            
-           Destroy(self);
+            OnEnemyDeath?.Invoke();
+            Destroy(self);
             
 
         }

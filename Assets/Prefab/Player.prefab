@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackArea: {fileID: 3616296274360584845}
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 1
   attackPoint: {fileID: 2060538995365904198}
   attackRange: 1.5
   enemyLayers:
@@ -451,6 +451,7 @@ MonoBehaviour:
   health: 4
   maxHeatlh: 6
   player: {fileID: 4556772136151169680}
+  restartText: {fileID: 0}
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0
