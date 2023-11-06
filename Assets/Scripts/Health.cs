@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        restartText.SetActive(false);
         health = maxHeatlh;
     }
 
@@ -41,6 +42,7 @@ public class Health : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && health == 0) 
         {
             SceneManager.LoadScene("StartScene(BLANK)");
+            restartText.SetActive(false);
             Time.timeScale = 1;
         }
     }
