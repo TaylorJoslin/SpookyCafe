@@ -8,7 +8,7 @@ public class GameStart : MonoBehaviour
 {
     public GameObject player, SoulImage, SoulAmount,HeartGroup;
 
-    public GameObject Screen, StartButton,Title, InstuctionK, InstuctionC;
+    public GameObject Screen, StartButton,Title, InstuctionK, InstuctionC,restart;
 
     //public AudioSource TitleMusic;
     
@@ -21,6 +21,7 @@ public class GameStart : MonoBehaviour
         SoulImage.SetActive(false);
         SoulAmount.SetActive(false);
         HeartGroup.SetActive(false);
+        restart.SetActive(false);
 
         Screen.SetActive(true);
         StartButton.SetActive(true);

@@ -400,6 +400,7 @@ MonoBehaviour:
   SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
   AttackRangeIndicator: {fileID: 6364263716984990037}
   AttackSound: {fileID: 8300000, guid: b74ac327955497c46b058cd09044cea8, type: 3}
+  EnemyHP: {fileID: 0}
 --- !u!136 &1038788207446056847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -449,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   maxHeatlh: 6
-  player: {fileID: 0}
+  player: {fileID: 4556772136151169680}
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0

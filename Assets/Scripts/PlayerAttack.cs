@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject SoulPrefab;
     public GameObject AttackRangeIndicator;
     public AudioClip AttackSound;
+    //public EnemyHealth EnemyHP;
    
 
     // Start is called before the first frame update
@@ -38,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
                 Debug.Log("PlayerATTACK");
 
                 Attack();
+                //EnemyHP.GetComponent<Health>().TakeDamage(2);
                 AttackRangeIndicator.SetActive(true);
                 AudioSource.PlayClipAtPoint(AttackSound, transform.position);
                 hasAttacked = true;
