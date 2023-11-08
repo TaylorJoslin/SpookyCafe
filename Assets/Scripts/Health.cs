@@ -41,7 +41,14 @@ public class Health : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && health == 0) 
         {
-            SceneManager.LoadScene("StartScene(BLANK)");
+            Destroy(GameObject.Find("Player"));
+            Destroy(GameObject.Find("Canvas"));
+            Destroy(GameObject.Find("EventSystem"));
+            Destroy(GameObject.Find("GameManager"));
+            Destroy(GameObject.Find("Virtual Camera"));
+            Destroy(GameObject.Find("Main Camera"));
+
+            SceneManager.LoadSceneAsync("StartScene(BLANK)");
             restartText.SetActive(false);
             Time.timeScale = 1;
         }

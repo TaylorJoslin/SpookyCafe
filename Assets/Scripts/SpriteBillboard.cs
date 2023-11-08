@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpriteBillboard : MonoBehaviour
 {
-    [SerializeField] bool freezeXZAxis = true;
+    [SerializeField] bool freezeXZAxis;
 
     // Start is called before the first frame update
     void Start()

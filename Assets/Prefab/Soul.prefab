@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 5164455782989059723}
   - component: {fileID: 4979092778490871694}
   - component: {fileID: 7598855465140919056}
-  - component: {fileID: 7405225999236122121}
   - component: {fileID: 8372901591654688673}
   m_Layer: 0
   m_Name: Soul
@@ -223,19 +222,6 @@ MonoBehaviour:
   speed: 3
   height: 0.03
 --- !u!114 &7598855465140919056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7178926211251274814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2303e85f749ae8f4a9e427828b9211c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUp: {fileID: 8300000, guid: eaebc421486f1c645a1b4236764a05c4, type: 3}
---- !u!114 &7405225999236122121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

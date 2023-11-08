@@ -39,6 +39,7 @@ public class EnemyNavMesh : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         AttackWindUp = Physics.CheckSphere(transform.position, WindUpRange, whatIsPlayer);
+        
 
         if (!playerInSightRange && !playerInAttackRange) 
         { 
