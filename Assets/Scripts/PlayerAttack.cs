@@ -8,14 +8,16 @@ public class PlayerAttack : MonoBehaviour
 
     bool hasAttacked;
     public float timeBetweenAttacks;
+    //public Animator attackAni;
+    
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    //public GameObject SoulPrefab;
-    public GameObject AttackRangeIndicator;
+    
+    
     public AudioClip AttackSound;
-    //public EnemyHealth EnemyHP;
+    
     public float KnockbackForce;
 
 
@@ -23,8 +25,8 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
-        AttackRangeIndicator.SetActive(false);
         
+        //attackAni = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,8 +43,8 @@ public class PlayerAttack : MonoBehaviour
                 Debug.Log("PlayerATTACK");
 
                 Attack();
-               
-                AttackRangeIndicator.SetActive(true);
+                //attackAni.SetTrigger("Active");
+                
                 AudioSource.PlayClipAtPoint(AttackSound, transform.position);
                 hasAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -51,11 +53,7 @@ public class PlayerAttack : MonoBehaviour
            
             
         }
-        else 
-        { 
-            AttackRangeIndicator.SetActive(false);
-            
-        }
+        
 
         
 
@@ -75,8 +73,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<EnemyHealth>().TakeDamage(2);
             enemy.transform.position += transform.forward * Time.deltaTime * KnockbackForce;
-            //Destroy(enemy.gameObject);
-            //Instantiate(SoulPrefab, enemy.transform.position, enemy.transform.rotation);
+            
         }
     }
 
