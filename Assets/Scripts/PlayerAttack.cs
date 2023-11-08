@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject SoulPrefab;
     public GameObject AttackRangeIndicator;
     public AudioClip AttackSound;
-    public EnemyHealth EnemyHP;
+    //public EnemyHealth EnemyHP;
     public float KnockbackForce;
 
 
@@ -24,6 +24,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attackArea = transform.GetChild(0).gameObject;
         AttackRangeIndicator.SetActive(false);
+        
     }
 
     // Update is called once per frame
