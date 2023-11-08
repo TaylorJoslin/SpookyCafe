@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +11,8 @@ public class EnemyNavMesh : MonoBehaviour
     public GameObject player;
     public LayerMask whatIsGround, whatIsPlayer;
     public AudioClip PlayerAttacked;
+    public SpriteRenderer sr;
+    public float KnockbackForce;
 
     //patrolling
     public Vector3 walkPoint;
@@ -21,8 +24,8 @@ public class EnemyNavMesh : MonoBehaviour
     bool hasAttacked;
 
     //states
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange, attackRange,WindUpRange;
+    public bool playerInSightRange, playerInAttackRange,AttackWindUp;
 
     private void Awake()
     {
@@ -35,6 +38,7 @@ public class EnemyNavMesh : MonoBehaviour
         //check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        AttackWindUp = Physics.CheckSphere(transform.position, WindUpRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange) 
         { 
@@ -50,6 +54,16 @@ public class EnemyNavMesh : MonoBehaviour
         {
             AttackPlayer();
         }
+
+        if (playerInSightRange && AttackWindUp)
+        {
+            AttackIndicator();
+        }
+    }
+
+    private void AttackIndicator()
+    {
+        sr.color = Color.black;
     }
 
     private void Patroling()
@@ -104,6 +118,12 @@ public class EnemyNavMesh : MonoBehaviour
             AudioSource.PlayClipAtPoint(PlayerAttacked, transform.position);
 
             player.GetComponent<Health>().TakeDamage(1);
+            sr.color = Color.white;
+            player.transform.position += transform.forward * Time.deltaTime * KnockbackForce;
+            player.GetComponentInChildren<SpriteRenderer>().color = Color.black;
+            player.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+
+            transform.Translate(-transform.forward * 4 * Time.deltaTime);
 
             hasAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -122,6 +142,9 @@ public class EnemyNavMesh : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, WindUpRange);
 
     }
 }

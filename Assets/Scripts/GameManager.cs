@@ -28,9 +28,15 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void AddSoul()
+    public void AddSoul(int amount)
     {
-        soulAmount += 1;
+        soulAmount += amount;
         soulCount.text = soulAmount.ToString();
     } 
+
+    public void RemoveSoul(int amount)
+    {
+        soulAmount -= amount;
+        soulCount.text = soulAmount.ToString();
+    }
 }

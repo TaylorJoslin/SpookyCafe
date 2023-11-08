@@ -12,11 +12,12 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    public GameObject SoulPrefab;
+    //public GameObject SoulPrefab;
     public GameObject AttackRangeIndicator;
     public AudioClip AttackSound;
     public EnemyHealth EnemyHP;
-   
+    public float KnockbackForce;
+
 
     // Start is called before the first frame update
     void Start()
@@ -72,8 +73,9 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<EnemyHealth>().TakeDamage(2);
+            enemy.transform.position += transform.forward * Time.deltaTime * KnockbackForce;
             //Destroy(enemy.gameObject);
-            Instantiate(SoulPrefab, enemy.transform.position, enemy.transform.rotation);
+            //Instantiate(SoulPrefab, enemy.transform.position, enemy.transform.rotation);
         }
     }
 

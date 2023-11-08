@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public static event Action OnEnemyDeath;
     public float health,maxHealth;
     public GameObject self;
+    public GameObject SoulPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
         {
             health = 0;
             OnEnemyDeath?.Invoke();
+            Instantiate(SoulPrefab, transform.position, transform.rotation);
             Destroy(self);
             
 

@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 1038788207446056847}
   - component: {fileID: 4940914214650815230}
   - component: {fileID: 2525885245754587261}
+  - component: {fileID: 4507221210965831952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -397,10 +398,10 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
   AttackRangeIndicator: {fileID: 6364263716984990037}
   AttackSound: {fileID: 8300000, guid: b74ac327955497c46b058cd09044cea8, type: 3}
   EnemyHP: {fileID: 0}
+  KnockbackForce: 0
 --- !u!136 &1038788207446056847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -452,6 +453,29 @@ MonoBehaviour:
   maxHeatlh: 6
   player: {fileID: 4556772136151169680}
   restartText: {fileID: 0}
+--- !u!136 &4507221210965831952
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556772136151169680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1923306
+  m_Height: 0.7143654
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +551,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 934ed15163f1c0041a60f933b98e8ad0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

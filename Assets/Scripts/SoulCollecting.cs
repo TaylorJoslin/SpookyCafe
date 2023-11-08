@@ -14,7 +14,7 @@ public class SoulCollecting : MonoBehaviour
         {
            Destroy(this.gameObject);
             
-            GameManager.instance.AddSoul();
+            GameManager.instance.AddSoul(1);
             AudioSource.PlayClipAtPoint(pickUp, transform.position);
 
         }

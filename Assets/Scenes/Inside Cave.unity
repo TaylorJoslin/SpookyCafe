@@ -1396,7 +1396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 302952993}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &302952996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,13 +1421,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 832588874}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &302952997
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2386,7 +2393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 450041265}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &450041268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,13 +2418,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 459798686}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &450041269
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2634,7 +2648,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 466215909}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &466215912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,13 +2673,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 1360579701}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &466215913
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3218,7 +3239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 568352183}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &568352186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,13 +3264,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 1145955009}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &568352187
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5976,7 +6004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 1111667405}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &1111667408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,13 +6029,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 2139283564}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &1111667409
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10947,7 +10982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 2050302309}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!114 &2050302312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10969,13 +11007,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 1187424210}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &2050302313
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11526,13 +11568,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 1668188157}
+  KnockbackForce: 500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 10
   attackRange: 1
+  WindUpRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!195 &2111545434
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11567,7 +11613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
   self: {fileID: 2111545426}
+  SoulPrefab: {fileID: 7178926211251274814, guid: dee210bea49dcf348855be30e3e4401e, type: 3}
 --- !u!1 &2115700581
 GameObject:
   m_ObjectHideFlags: 0
