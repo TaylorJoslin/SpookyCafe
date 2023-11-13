@@ -13,6 +13,7 @@ public class EnemyNavMesh : MonoBehaviour
     public AudioClip PlayerAttacked;
     public SpriteRenderer sr;
     public float KnockbackForce;
+    public Animator ani;
 
     //patrolling
     public Vector3 walkPoint;
@@ -24,8 +25,8 @@ public class EnemyNavMesh : MonoBehaviour
     bool hasAttacked;
 
     //states
-    public float sightRange, attackRange,WindUpRange;
-    public bool playerInSightRange, playerInAttackRange,AttackWindUp;
+    public float sightRange, attackRange;
+    public bool playerInSightRange, playerInAttackRange;
 
     private void Awake()
     {
@@ -38,34 +39,33 @@ public class EnemyNavMesh : MonoBehaviour
         //check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-        AttackWindUp = Physics.CheckSphere(transform.position, WindUpRange, whatIsPlayer);
+        
         
 
         if (!playerInSightRange && !playerInAttackRange) 
         { 
-            Patroling(); 
+            Patroling();
+            ani.SetTrigger("idle");
         }
 
         if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
+            ani.SetTrigger("run");
         }
 
         if (playerInSightRange && playerInAttackRange)
         {
             AttackPlayer();
+            ani.SetTrigger("atk");
+            ani.SetTrigger("run");
         }
+       
 
-        if (playerInSightRange && AttackWindUp)
-        {
-            AttackIndicator();
-        }
+        
     }
 
-    private void AttackIndicator()
-    {
-        sr.color = Color.black;
-    }
+    
 
     private void Patroling()
     {
@@ -144,8 +144,7 @@ public class EnemyNavMesh : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
 
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, WindUpRange);
+       
 
     }
 }
