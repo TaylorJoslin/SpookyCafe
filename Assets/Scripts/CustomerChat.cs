@@ -14,7 +14,6 @@ public class CustomerChat : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        chat.SetActive(true);
 
         if (GameManager.soulAmount >= 10)
         {
@@ -22,6 +21,9 @@ public class CustomerChat : MonoBehaviour
             questBubble.SetActive(false);
             questTurnIn.SetActive(true);
             chat.SetActive(false);
+        }else
+        {
+            chat.SetActive(true);
         }
     }
 

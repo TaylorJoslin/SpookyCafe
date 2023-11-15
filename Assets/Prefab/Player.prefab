@@ -195,8 +195,8 @@ GameObject:
   - component: {fileID: 9213055264498613538}
   - component: {fileID: 1038788207446056847}
   - component: {fileID: 4940914214650815230}
-  - component: {fileID: 2525885245754587261}
   - component: {fileID: 4507221210965831952}
+  - component: {fileID: 1833157780259806893}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -328,22 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30a99acecb95ae4e99ee8368bc8914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2525885245754587261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4556772136151169680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf50679cf848c84bb45c22c4d19e79d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 4
-  maxHeatlh: 6
-  player: {fileID: 4556772136151169680}
-  restartText: {fileID: 0}
 --- !u!136 &4507221210965831952
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -367,6 +351,26 @@ CapsuleCollider:
   m_Height: 0.7143654
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1833157780259806893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556772136151169680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed86078798777448a913b3a654efc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  fullHeart: {fileID: 21300000, guid: 1206fcdbd550b944888eef820664dc89, type: 3}
+  halfHeart: {fileID: 21300000, guid: d8b8ffbd33218a44a8477bdb762aa95e, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 36ea80fa69db51a4585f6f6a74a8f946, type: 3}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0

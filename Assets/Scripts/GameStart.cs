@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
-    public GameObject player, SoulImage, SoulAmount,HeartGroup;
+    public GameObject player, SoulImage, SoulAmount,heart1,heart2,heart3;
 
     public GameObject Screen, StartButton,Title, InstuctionK, InstuctionC,restart;
 
@@ -20,8 +20,11 @@ public class GameStart : MonoBehaviour
         player.SetActive(false);
         SoulImage.SetActive(false);
         SoulAmount.SetActive(false);
-        HeartGroup.SetActive(false);
+        //HeartGroup.SetActive(false);
         restart.SetActive(false);
+        heart1.SetActive(false);
+        heart2.SetActive(false);
+        heart3.SetActive(false);
 
         Screen.SetActive(true);
         StartButton.SetActive(true);
@@ -44,7 +47,10 @@ public class GameStart : MonoBehaviour
         player.SetActive(true);
         SoulImage.SetActive(true);
         SoulAmount.SetActive(true);
-        HeartGroup.SetActive(true);
+        //HeartGroup.SetActive(true);
+        heart1.SetActive(true);
+        heart2.SetActive(true);
+        heart3.SetActive(true);
 
         Screen.SetActive(false);
         StartButton.SetActive(false);

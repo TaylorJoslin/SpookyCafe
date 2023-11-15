@@ -9,6 +9,7 @@ public class EnemyNavMesh : MonoBehaviour
 {
     public NavMeshAgent Agent;
     public GameObject player;
+   
     public LayerMask whatIsGround, whatIsPlayer;
     public AudioClip PlayerAttacked;
     public SpriteRenderer sr;
@@ -117,8 +118,10 @@ public class EnemyNavMesh : MonoBehaviour
         {
             Debug.Log("ATTACK");
             AudioSource.PlayClipAtPoint(PlayerAttacked, transform.position);
+            
+            player.GetComponent<NewHealthUI>().TakeDamage();
 
-            player.GetComponent<Health>().TakeDamage(1);
+            //player.GetComponent<Health>().TakeDamage(1);
             sr.color = Color.white;
             player.transform.position += transform.forward * Time.deltaTime * KnockbackForce;
             player.GetComponentInChildren<SpriteRenderer>().color = Color.black;
