@@ -7,11 +7,11 @@ public class addPoints : MonoBehaviour
     private PointManager points;
    
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Cup")
+        if (other.gameObject.tag == "Cup")
         {
-            
+            PointManager.Score++;
         }
     }
 }
