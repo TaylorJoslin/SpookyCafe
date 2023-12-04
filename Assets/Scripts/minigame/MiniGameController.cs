@@ -8,11 +8,14 @@ public class MiniGameController : MonoBehaviour
 {
     public GameObject DisplayBox;
     public GameObject PassBox;
+    public GameObject WaterPrefab;
 
     public int QWEGen;
     public int WaitingForKey;
     public int CorrectKey;
     public int CountingDown;
+
+
 
     private void Update()
     {
@@ -100,6 +103,9 @@ public class MiniGameController : MonoBehaviour
         {
             CountingDown = 2;
             PassBox.GetComponent<TextMeshProUGUI>().text = "Great!";
+            Instantiate(WaterPrefab, transform.position, transform.rotation);
+            Instantiate(WaterPrefab, transform.position, transform.rotation);
+            Instantiate(WaterPrefab, transform.position, transform.rotation);
             yield return new WaitForSeconds(1.5f);
             CorrectKey = 0;
             PassBox.GetComponent<TextMeshProUGUI>().text = "";
