@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class addPoints : MonoBehaviour
 {
-    private PointManager points;
    
+    public GameObject winText;
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void Start()
     {
-        if (other.gameObject.tag == "Cup")
+        winText.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Water")
         {
-            PointManager.Score++;
+            winText.SetActive(true);
         }
     }
 }
