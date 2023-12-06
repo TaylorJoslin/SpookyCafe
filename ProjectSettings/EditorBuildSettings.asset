@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dead Meadows.unity
     guid: 4f1ad2bb5a174490990337801180b54e
+  - enabled: 1
+    path: Assets/Scenes/Minigame.unity
+    guid: cb6487753f17b7b42bedb85d49b18d56
   m_configObjects: {}

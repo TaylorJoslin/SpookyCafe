@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class addPoints : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class addPoints : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             winText.SetActive(true);
+            SceneManager.LoadScene(1);
         }
     }
 }
