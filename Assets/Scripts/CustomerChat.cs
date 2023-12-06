@@ -8,26 +8,14 @@ public class CustomerChat : MonoBehaviour
     public GameObject chat;
     public GameObject questBubble,questTurnIn;
     private bool request = false;
+    private bool turnin = false;
 
     private void Start()
     {
         chat.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        
-        
-        if (GameManager.soulAmount >= 10)
-        {
-            GameManager.instance.RemoveSoul(10);
-            SceneManager.LoadScene(4);
-            questBubble.SetActive(false);
-            questTurnIn.SetActive(true);
-
-            
-        }
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,6 +23,19 @@ public class CustomerChat : MonoBehaviour
         {
             chat.SetActive(true);
             request = true;
+        }
+
+        if (!turnin)
+        {
+            if (GameManager.soulAmount >= 10)
+            {
+                GameManager.instance.RemoveSoul(10);
+                SceneManager.LoadScene(4);
+                questBubble.SetActive(false);
+                questTurnIn.SetActive(true);
+                turnin = true;
+
+            }
         }
     }
 

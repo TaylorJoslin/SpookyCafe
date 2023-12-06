@@ -9,6 +9,7 @@ public class MiniGameController : MonoBehaviour
     public GameObject DisplayBox;
     public GameObject PassBox;
     public GameObject WaterPrefab;
+    public CameraShake camerashake;
 
     public int QWEGen;
     public int WaitingForKey;
@@ -120,6 +121,7 @@ public class MiniGameController : MonoBehaviour
         {
             CountingDown = 2;
             PassBox.GetComponent<TextMeshProUGUI>().text = "Miss!!!";
+            camerashake.Shake();
             yield return new WaitForSeconds(1.5f);
             CorrectKey = 0;
             PassBox.GetComponent<TextMeshProUGUI>().text = "";
@@ -132,12 +134,13 @@ public class MiniGameController : MonoBehaviour
 
     IEnumerator CountDown()
     {
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(4f);
         if (CountingDown == 1)
         {
             QWEGen = 4;
             CountingDown = 2;
             PassBox.GetComponent<TextMeshProUGUI>().text = "Miss!!!";
+            camerashake.Shake();
             yield return new WaitForSeconds(1.5f);
             CorrectKey = 0;
             PassBox.GetComponent<TextMeshProUGUI>().text = "";
