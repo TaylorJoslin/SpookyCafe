@@ -7,6 +7,7 @@ public class CustomerChat : MonoBehaviour
 {
     public GameObject chat;
     public GameObject questBubble,questTurnIn;
+    public GameObject player;
     private bool request = false;
     private bool turnin = false;
 
@@ -30,6 +31,7 @@ public class CustomerChat : MonoBehaviour
             if (GameManager.soulAmount >= 10)
             {
                 GameManager.instance.RemoveSoul(10);
+                player.SetActive(false);
                 SceneManager.LoadScene(4);
                 questBubble.SetActive(false);
                 questTurnIn.SetActive(true);
