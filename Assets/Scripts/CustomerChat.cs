@@ -32,7 +32,7 @@ public class CustomerChat : MonoBehaviour
             {
                 GameManager.instance.RemoveSoul(10);
                 player.SetActive(false);
-                SceneManager.LoadScene(4);
+               
                 questBubble.SetActive(false);
                 questTurnIn.SetActive(true);
                 turnin = true;

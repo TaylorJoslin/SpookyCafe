@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 4940914214650815230}
   - component: {fileID: 4507221210965831952}
   - component: {fileID: 1833157780259806893}
+  - component: {fileID: 1511347568486023587}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -292,7 +293,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   AttackSound: {fileID: 8300000, guid: b74ac327955497c46b058cd09044cea8, type: 3}
-  KnockbackForce: 500
+  KnockbackForce: 400
 --- !u!136 &1038788207446056847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -371,6 +372,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!95 &1511347568486023587
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556772136151169680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49b9ab064da0e174aaccfef9e7ef3940, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5770831900421646404
 GameObject:
   m_ObjectHideFlags: 0
